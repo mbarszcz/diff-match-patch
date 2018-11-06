@@ -1,12 +1,20 @@
 # dmp
 
-Diff Match and Patch, packaged for modern Python
+Google's [Diff Match and Patch] library, packaged for modern Python
 
 [![build status](https://travis-ci.org/jreese/dmp.svg?branch=master)](https://travis-ci.org/jreese/dmp)
 [![version](https://img.shields.io/pypi/v/dmp.svg)](https://pypi.org/project/dmp)
 [![license](https://img.shields.io/pypi/l/dmp.svg)](https://github.com/facebookincubator/dmp/blob/master/LICENSE)
 
-## About
+## Install
+
+dmp requires any version of Python 3.  You can install it from PyPI:
+
+```shell
+pip install dmp
+```
+
+## Original README
 The Diff Match and Patch libraries offer robust algorithms to perform the
 operations required for synchronizing plain text.
 
