@@ -1,6 +1,6 @@
 # dmp
 
-Google's [Diff Match and Patch] library, packaged for modern Python
+Google's [Diff Match and Patch][DMP] library, packaged for modern Python
 
 [![build status](https://travis-ci.org/jreese/dmp.svg?branch=master)](https://travis-ci.org/jreese/dmp)
 [![version](https://img.shields.io/pypi/v/dmp.svg)](https://pypi.org/project/dmp)
@@ -56,3 +56,5 @@ A standardized speed test tracks the [relative performance of diffs](https://doc
 This library implements [Myer's diff algorithm](https://neil.fraser.name/writing/diff/myers.pdf) which is generally considered to be the best general-purpose diff. A layer of [pre-diff speedups and post-diff cleanups](https://neil.fraser.name/writing/diff/) surround the diff algorithm, improving both performance and output quality.
 
 This library also implements a [Bitap matching algorithm](https://neil.fraser.name/writing/patch/bitap.ps) at the heart of a [flexible matching and patching strategy](https://neil.fraser.name/writing/patch/).
+
+[DMP]: https://github.com/google/diff-match-patch
