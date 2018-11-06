@@ -1,6 +1,6 @@
 # dmp
 
-Google's [Diff Match and Patch][DMP] library, packaged for modern Python
+Google's [Diff Match and Patch][DMP] library, packaged for modern Python.
 
 [![build status](https://travis-ci.org/jreese/dmp.svg?branch=master)](https://travis-ci.org/jreese/dmp)
 [![version](https://img.shields.io/pypi/v/dmp.svg)](https://pypi.org/project/dmp)
@@ -12,6 +12,33 @@ dmp requires any version of Python 3.  You can install it from PyPI:
 
 ```shell
 pip install dmp
+```
+
+## Usage
+
+To make it possible to coexist with upstream diff-match-patch (and to reduce
+boilerplate), this makes the normal [API][] available to import as `dmp` instead
+of `diff_match_patch`. The rest of the API remains unchanged, although helper
+functions may be added in future updates.
+
+Generating a patchset (analogous to unified diff) between two texts:
+
+```python
+from dmp import diff_match_patch
+
+dmp = diff_match_patch()
+patches = dmp.patch_make(text1, text2)
+diff = dmp.patch_toText(patches)
+```
+
+Applying a patchset to a text can then be done with:
+
+```python
+from dmp import diff_match_patch
+
+dmp = diff_match_patch()
+patches = dmp.patch_fromText(diff)
+new_text, _ = dmp.patch_apply(patches, text)
 ```
 
 ## Original README
@@ -58,3 +85,4 @@ This library implements [Myer's diff algorithm](https://neil.fraser.name/writing
 This library also implements a [Bitap matching algorithm](https://neil.fraser.name/writing/patch/bitap.ps) at the heart of a [flexible matching and patching strategy](https://neil.fraser.name/writing/patch/).
 
 [DMP]: https://github.com/google/diff-match-patch
+[API]: https://github.com/google/diff-match-patch/wiki/API
