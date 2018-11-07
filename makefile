@@ -14,11 +14,11 @@ release: lint test clean
 	python3 -m twine upload dist/*
 
 lint:
-	-black --check dmp setup.py
-	-mypy --ignore-missing-imports --python-version 3.6 .
+	-python -m black --check dmp setup.py
+	-python -m mypy --ignore-missing-imports .
 
 test:
-	python3 -m unittest -v dmp.tests
+	python -m unittest -v dmp.tests
 
 clean:
 	rm -rf build dist README MANIFEST *.egg-info
