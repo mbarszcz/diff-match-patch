@@ -8,10 +8,10 @@ Google's [Diff Match and Patch][DMP] library, packaged for modern Python.
 
 ## Install
 
-dmp requires any version of Python 3.  You can install it from PyPI:
+dmp is supported on Python 2.7 or Python 3.4 or newer.  You can install it from PyPI:
 
 ```shell
-pip install dmp
+python -m pip install dmp
 ```
 
 ## Usage
