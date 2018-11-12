@@ -2,9 +2,9 @@
 
 Google's [Diff Match and Patch][DMP] library, packaged for modern Python.
 
-[![build status](https://travis-ci.org/jreese/dmp.svg?branch=master)](https://travis-ci.org/jreese/dmp)
-[![version](https://img.shields.io/pypi/v/dmp.svg)](https://pypi.org/project/dmp)
-[![license](https://img.shields.io/pypi/l/dmp.svg)](https://github.com/facebookincubator/dmp/blob/master/LICENSE)
+[![build status](https://travis-ci.org/diff-match-patch-python/diff-match-patch.svg?branch=master)](https://travis-ci.org/diff-match-patch-python/diff-match-patch)
+[![version](https://img.shields.io/pypi/v/diff-match-patch.svg)](https://pypi.org/project/diff-match-patch)
+[![license](https://img.shields.io/pypi/l/diff-match-patch.svg)](https://github.com/diff-match-patch-python/diff-match-patch/blob/master/LICENSE)
 
 ## Install
 
@@ -17,15 +17,10 @@ python -m pip install diff-match-patch
 
 ## Usage
 
-To make it possible to coexist with upstream diff-match-patch (and to reduce
-boilerplate), this makes the normal [API][] available to import as `dmp` instead
-of `diff_match_patch`. The rest of the API remains unchanged, although helper
-functions may be added in future updates.
-
 Generating a patchset (analogous to unified diff) between two texts:
 
 ```python
-from dmp import diff_match_patch
+from diff_match_patch import diff_match_patch
 
 dmp = diff_match_patch()
 patches = dmp.patch_make(text1, text2)
@@ -35,7 +30,7 @@ diff = dmp.patch_toText(patches)
 Applying a patchset to a text can then be done with:
 
 ```python
-from dmp import diff_match_patch
+from diff_match_patch import diff_match_patch
 
 dmp = diff_match_patch()
 patches = dmp.patch_fromText(diff)
