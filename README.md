@@ -1,4 +1,4 @@
-# dmp
+# diff-match-patch
 
 Google's [Diff Match and Patch][DMP] library, packaged for modern Python.
 
@@ -8,10 +8,11 @@ Google's [Diff Match and Patch][DMP] library, packaged for modern Python.
 
 ## Install
 
-dmp is supported on Python 2.7 or Python 3.4 or newer.  You can install it from PyPI:
+diff-match-patch is supported on Python 2.7 or Python 3.4 or newer.
+You can install it from PyPI:
 
 ```shell
-python -m pip install dmp
+python -m pip install diff-match-patch
 ```
 
 ## Usage

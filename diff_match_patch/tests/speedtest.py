@@ -25,7 +25,7 @@ import time
 parentPath = os.path.abspath("..")
 if parentPath not in sys.path:
     sys.path.insert(0, parentPath)
-import dmp as dmp_module
+import diff_match_patch as dmp_module
 # Force a module reload.  Allows one to edit the DMP module and rerun the test
 # without leaving the Python interpreter.
 imp.reload(dmp_module)
