@@ -6,7 +6,7 @@ with open("README.md") as f:
 with open("diff_match_patch/__init__.py") as f:
     for line in f:
         if line.startswith("__version__"):
-            version = "1!" + line.split('"')[1]
+            version = line.split('"')[1]
 
 setup(
     name="diff-match-patch",
