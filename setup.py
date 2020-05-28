@@ -33,6 +33,6 @@ setup(
     ],
     license="Apache",
     packages=["diff_match_patch", "diff_match_patch.tests"],
-    setup_requires=["setuptools>=38.6.0"],
+    setup_requires=["setuptools<=46.3.0"],
     install_requires=[],
 )
